@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<% newsData.forEach(function(news){ %>
+
+<a href="<%= news.url %>">
+  <div class="newsbox">
+
+    <h1><%=news.title %></h1>
+    <h3> Description: </h3>
+    <p> <%=news.description %> </p>
+    <h3> Content: </h3>
+    <p> <%=news.content%>Read more </p>
+      <% if(news.author){ %>
+      <h6>author: <%= news.author %> </h6>
+    <% } %>
+
+  </div>
+</a>
+
+<% }); %>
+
+<%- include('partials/footer') %>
