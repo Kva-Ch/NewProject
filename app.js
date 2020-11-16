@@ -56,7 +56,6 @@ app.get("/", function(req, res) {
 app.post("/news", async function(req, res) {
 
   const query = req.body.topic;
-
   const url = 'https://newsapi.org/v2/everything?q='+query+'&apiKey=c6b6d533d07c483a83720e48f51fe903';
 
   const response = await axios.get(url);
